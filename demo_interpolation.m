@@ -56,7 +56,7 @@ ylim([-10, 10]);
 test1(f1, range1, @linspace);
 
 subplot(2, 2, 3);
-ylim([-10, 10]);
+ylim([-5, 30]);
 test1(f2, range2, @linspace);
 
 subplot(2, 2, 2);
@@ -64,7 +64,7 @@ ylim([-10, 10]);
 test1(f1, range1, @chebyshevNodes);
 
 subplot(2, 2, 4);
-ylim([-10, 10]);
+ylim([-5, 30]);
 test1(f2, range2, @chebyshevNodes);
 
 disp("f1, linspace")
