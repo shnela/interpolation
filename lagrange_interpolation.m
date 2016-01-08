@@ -12,8 +12,12 @@ endfunction
 function w = Horner(c, x, z)
   n = length(c); # degree
   m = length(z); # number of points to calculate
-  w = ones(1, m); # just to initialize vector of length n
-  for j = 1:n
-    w = w .* (z .- c(j));
+  w = v = ones(1, n); # just to initialize vector of length n, v is tmp w
+  for i = 1:m
+    v(n) = c(n);
+    for j = fliplr(1:(n-1))
+      v(j) = v(j + 1) * (z(i) - x(j)) + c(j);
+    endfor
+    w(i) = v(1);
   endfor
 endfunction
