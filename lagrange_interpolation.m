@@ -6,7 +6,7 @@ function c = wspNewton(x, y)
       b(k) = (b(k) - b(k-1)) / (x(k) - x(k-j));
     endfor
   endfor
-  c = b(1:n-1);
+  c = b;
 endfunction
 
 function w = Horner(c, x, z)
